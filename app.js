@@ -19,13 +19,13 @@ const path = require("path");
 // }
 
 
-// fs.readdir(path.join('./main'),{withFileTypes:true}, (err, files)=>{
-//     if (err)throw new Error(err.message)
-//     for (const file of files) {
-//         if (file.isFile()){
-//             console.log(`File : ${file.name}`);
-//         }else {
-//             console.log(`Folder : ${file.name}`)
-//         }
-//     }
-// })
+fs.readdir(path.join('./main'),{withFileTypes:true}, (err, files)=>{
+    if (err)throw new Error(err.message)
+    for (const file of files) {
+        if (file.isFile()){
+            console.log(`File : ${file.name}`);
+        }else {
+            console.log(`Folder : ${file.name}`)
+        }
+    }
+})
