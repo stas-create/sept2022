@@ -23,5 +23,6 @@ app.use((err: IError, req: Request, res: Response, next: NextFunction) => {
 
 app.listen(configs.PORT, async () => {
   await mongoose.connect(configs.DB_URL);
+  // eslint-disable-next-line no-console
   console.log(`server work ${configs.PORT}`);
 });
